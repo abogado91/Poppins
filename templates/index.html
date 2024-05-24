@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              "50": "#f7eaff",
+              "100": "#efd4ff",
+              "200": "#e7bfff",
+              "300": "#dfa9ff",
+              "400": "#d794ff",
+              "500": "#d580ff",
+              "600": "#b366cc",
+              "700": "#8a4d99",
+              "800": "#623366",
+              "900": "#3a1a33",
+              "950": "#1c0d1a"
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .carousel-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+    .carousel-item {
+      flex: 0 0 33.3333%;
+      min-width: 33.3333%;
+      box-sizing: border-box;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+     <!-- Sección del encabezado -->
+    <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+      <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
+        <nav class="w-full flex flex-row items-center font-sans justify-between p-2">
+          <img src="/static/logo33.png" alt="" class="shadow-xl">
+          <a class="h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Iniciar Sesión</a>
+        </nav>
+      </div>
+    </header>
+   
+    <!-- Sección principal con imagen de fondo y texto -->
+    <section class="h-dvh w-dvw max-h-[80rem] relative">
+      <div class="absolute inset-0 z-[1]">
+        <img class="h-full w-full object-cover object-center opacity-90" src="/static/cuidado3.jpg" alt="">
+      </div>
+      <div class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
+        <div class="h-full w-1/2 flex flex-col">
+          <div class="mt-auto text-gray-50 bg-gray-500 bg-opacity-70 p-8 mb-8">
+            <h1 class="text-3xl mb-6 md:text-5xl max-w-[30rem] font-medium">Cuidamos con amor</h1>
+            <div class="font-bold text-m text-white mb-4 text-right">Poppins ¡El favorito de los padres, amado por las niñeras! Recupera tu vida social, gestiona tu carrera o simplemente contá con un par de manos extra; ¡Poppins es tu red aliada!</div>
+            <p class="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm"></p>
+            <div class="md:flex-row flex-col flex gap-4">
+                <a href="/registrar">
+                <button class="inline-block text-base font-medium px-12 py-2 bg-accent-400 rounded-lg cursor-pointer"> Somos papis</button>
+                </a>
+                <a href="/perfil">
+                <button class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-white">Soy niñera</button>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Aca un poco sobre sobre Poppins -->
+
+  <section class="py-12 bg-gray-100 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-fuchsia-400">¿Qué es Poppins?</h2>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-accent-400 p-6 rounded-lg shadow-lg text-center">
+          <img src="/static/entrevista1.jpg" alt="Seguridad" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold mb-2 text-white">Seguridad</h3>
+          <p class="text-white">En Poppins, nos aseguramos de que cada cuidadora pase por un riguroso proceso de selección para garantizar la seguridad de tus seres queridos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="/static/manos.jpg" alt="Confianza" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold mb-2">Confianza</h3>
+          <p class="text-gray-700">Nuestros servicios están diseñados para generar confianza, permitiéndote dedicar tiempo a lo que más te importa mientras nosotros cuidamos de tu familia.</p>
+        </div>
+        <div class="bg-accent-400 p-6 rounded-lg shadow-lg text-center">
+          <img src="/static/pareja.jpg.webp" alt="Conveniencia" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold mb-2 text-white">Conveniencia</h3>
+          <p class="text-white">Ofrecemos una plataforma fácil de usar que conecta a los padres con niñeras de manera rápida y eficiente, adaptándonos a tus horarios y necesidades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-100 font-sans">
+    <div class="container mx-auto py-12">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">¿Por qué Poppins es perfecto para ti?</h2>
+      <div class="space-y-8">
+        <div class="flex flex-col md:flex-row bg-[#ffccff] shadow-md rounded-lg overflow-hidden">
+          <img src="/static/multitud.jpg" alt="Disponibilidad" class="w-full md:w-1/2 h-48 md:h-auto object-cover">
+          <div class="p-6 flex flex-col justify-center">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Disponibilidad</h3>
+            <p class="text-gray-600 text-lg">Nuestros servicios están disponibles las 24 horas del día, los 7 días de la semana, para adaptarse a las necesidades de tu familia. Encontrar y contactar a una cuidadora a través de nuestra plataforma es muy fácil. Simplemente ingresa tus requisitos, revisa los perfiles detallados y selecciona a la cuidadora que mejor se adapte a tus necesidades. Con solo unos clics, podrás asegurar el cuidado ideal para tus hijos.</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row-reverse bg-[#ffccff] shadow-md rounded-lg overflow-hidden">
+          <img src="/static/clase.png" alt="Niñeras Calificadas" class="w-full md:w-1/2 h-48 md:h-auto object-cover">
+          <div class="p-6 flex flex-col justify-center">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Niñeras Calificadas</h3>
+            <p class="text-gray-600 text-lg">Nuestras cuidadoras pasan por un riguroso proceso de capacitación a través de cursos especializados. En estos cursos, adquieren conocimientos y habilidades en primeros auxilios, protección y bienestar, utilizando recursos proporcionados por expertos en cada área. Esto garantiza que estén preparadas para ofrecer el mejor cuidado posible en cualquier situación.</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row bg-[#ffccff] shadow-md rounded-lg overflow-hidden">
+          <img src="/static/special_needs.png" alt="Cuidadoras especializadas para niños y niñas con discapacidad" class="w-full md:w-1/2 h-48 md:h-auto object-cover">
+          <div class="p-6 flex flex-col justify-center">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Cuidadoras especializadas para niños y niñas con discapacidad</h3>
+            <p class="text-gray-600 text-lg">Contamos con cuidadoras altamente capacitadas para el cuidado de niños y niñas con necesidades especiales o discapacidades. Estas profesionales han recibido formación específica para proporcionar el apoyo y la atención necesarios, asegurando un entorno seguro y enriquecedor. Nos aseguramos de que tengan las habilidades y conocimientos adecuados para manejar diversas situaciones, ofreciendo tranquilidad a las familias que confían en nosotros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Aca comienza la sección del carrusel de imágenes -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-fuchsia-400">Testimonios de nuestras cuidadoras</h2>
+      <div class="carousel-container mt-5" id="nannyCarousel">
+        <div class="carousel-track" id="nannyTrack">
+
+          <!-- Testimonios de las niñeras -->
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Gracias a Poppins, encontré un trabajo que realmente amo y que se ajusta perfectamente a mis necesidades. El equipo es muy profesional y siempre está dispuesto a ayudar."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- María Pérez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"La plataforma de Poppins es muy fácil de usar y me permitió conectarme con familias maravillosas que necesitan mis servicios."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Ana Rodríguez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Estoy muy agradecida con Poppins por ayudarme a encontrar un empleo estable y satisfactorio. ¡Recomiendo a todas las cuidadoras que se unan!"</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Laura Gómez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Poppins ha cambiado mi vida profesional. He encontrado familias increíbles con las que trabajar."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Elena Torres</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Gracias a Poppins, tengo un empleo seguro y flexible."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Carmen Ruiz</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"La mejor plataforma para cuidadoras, siempre encuentras oportunidades excelentes."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Isabel López</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Poppins me ha dado la oportunidad de crecer en mi carrera y encontrar familias maravillosas."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Sofia Díaz</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Estoy muy satisfecha con Poppins, me han ayudado a encontrar un empleo estable y satisfactorio."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Natalia Herrera</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Gracias a Poppins, he podido equilibrar mi vida laboral y personal."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Valeria Soto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Comentarios de los padres -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-fuchsia-400">Comentarios de padres satisfechos</h2>
+      <div class="carousel-container mt-5" id="parentCarousel">
+        <div class="carousel-track" id="parentTrack">
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Poppins ha sido una bendición para nuestra familia. Ahora podemos salir y trabajar con la tranquilidad de saber que nuestros hijos están en buenas manos."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Pedro Martínez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"El servicio de Poppins es excepcional. Nos conectaron con una cuidadora increíble que nuestros hijos adoran."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Carla Sánchez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"No podríamos estar más felices con Poppins. Nos facilita mucho la vida y nuestras cuidadoras siempre son de confianza."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Luis Fernández</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Poppins nos ha ayudado a encontrar la mejor cuidadora para nuestros hijos."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- José García</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Muy contentos con el servicio y la atención recibida."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Marta Jiménez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Recomendamos Poppins a todas las familias que buscan cuidadores de confianza."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Andrés Rodríguez</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Poppins ha sido una experiencia fantástica para nuestra familia."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Alejandro Torres</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Estamos muy contentos con el servicio de Poppins."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Laura Morales</p>
+          </div>
+          <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-2">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-700 italic">"Recomiendo Poppins a todos los padres."</p>
+            <p class="mt-4 text-fuchsia-400 font-bold">- Paula Hernández</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Pie de página (copiar en los otros forms)-->
+  <footer class="bg-[#eabfff] py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center text-gray-100">
+        <p>&copy; 2024 Poppins. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-fuchsia-500">Términos de servicio</a>
+          <a href="#" class="hover:text-fuchsia-500">Política de privacidad</a>
+          <a href="#" class="hover:text-fuchsia-500">Quiénes somos</a>
+          <a href="#" class="hover:text-fuchsia-500">Preguntas frecuentes</a>
+          <a href="#" class="hover:text-fuchsia-500">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const parentTrack = document.getElementById('parentTrack');
+    const parentItems = parentTrack.querySelectorAll('.carousel-item');
+    const nannyTrack = document.getElementById('nannyTrack');
+    const nannyItems = nannyTrack.querySelectorAll('.carousel-item');
+
+    let parentIndex = 0;
+    let nannyIndex = 0;
+
+    function moveCarousel(track, items, index) {
+      index += 3;
+      if (index >= items.length) {
+        index = 0;
+      }
+      track.style.transform = `translateX(-${index * 33.3333}%)`;
+      return index;
+    }
+
+    setInterval(() => {
+      nannyIndex = moveCarousel(nannyTrack, nannyItems, nannyIndex);
+    }, 4000);
+
+    setInterval(() => {
+      parentIndex = moveCarousel(parentTrack, parentItems, parentIndex);
+    }, 5000);
+  </script>
+</body>
+</html>

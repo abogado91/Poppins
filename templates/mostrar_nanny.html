@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            "50": "#f7eaff",
+                            "100": "#efd4ff",
+                            "200": "#e7bfff",
+                            "300": "#dfa9ff",
+                            "400": "#d794ff",
+                            "500": "#d580ff",
+                            "600": "#b366cc",
+                            "700": "#8a4d99",
+                            "800": "#623366",
+                            "900": "#3a1a33",
+                            "950": "#1c0d1a"
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="png" href="">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <header class="flex justify-between bg-accent-300 p-4 shadow-md">
+        <img src="/static/logo33.png" alt="Logo" class="h-15 w-40">
+    </header>
+
+    <main class="flex items-center justify-center flex-col pt-[15px] flex-grow gap-10 bg-gray-50 shadow-md">
+        <h1 class="text-4xl text-accent-600 font-bold">Nuestras Cuidadoras</h1>
+        {% for nanny in nannys %}
+        <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 w-3/4 mb-8">
+            <div class="w-full md:w-1/3 flex justify-center items-center mb-4 md:mb-0">
+                {% if nanny.foto != None %}
+                <img src="../static/images/{{ nanny.foto }}" alt="Foto de {{ nanny.nombre }}" class="rounded-full h-32 w-32 object-cover">
+                {% endif %}
+            </div>
+            <div class="w-full md:w-2/3 md:pl-6">
+                <h2 class="text-xl font-semibold text-gray-800"> {{nanny.nombre}} {{nanny.apellido}}</h2>
+                <p class="text-gray-600">Edad: {{nanny.edad}}</p>
+                <p class="text-gray-600">Ciudad: {{nanny.ciudad}}</p>
+                <p class="text-gray-600">Descripción: {{nanny.descripcion_bio}}</p>
+                <a href="http://wa.me/595971330759" class="mt-4 inline-block bg-accent-500 text-white rounded-lg px-4 py-2 hover:bg-accent-600">Contactar</a>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+
+    <footer class="bg-accent-300 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-100 text-1.5xl">&copy; 2024 Poppins. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

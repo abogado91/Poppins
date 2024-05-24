@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header>
+        <div class="bg-[#eabfff] p-4">
+            <img src="/static/logo33.png" alt="" class="">
+        </div>
+    </header>
+    <main class="min-h-screen">
+      <h2 class="text-2xl font-bold mb-6 text-center text-fuchsia-400">Registrate</h2>
+      <div class="flex bg-white p-8 rounded-lg shadow-lg w-full justify-evenly items-center">
+        <form action="/registrar" method="post" class="space-y-6 h-[50svh] w-1/2">
+          <div>
+              <label for="nombre_y_apellido" class="block text-gray-700">Nombre y apellido</label>
+              <input type="text" id="nombre_y_apellido" name="Nombre y Apellido" class="bg-gray-50 flex border-2 border-zinc-50 rounded-md placeholder-gray-500 w-full p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-fuchsia-400" placeholder="Ingresa aquí tu nombre y apellido" required>
+          </div>
+          <div>
+              <label for="correo" class="block text-gray-700">Correo electrónico</label>
+              <input type="email" id="correo" name="Correo electrónico" class="bg-gray-50 border-2 border-zinc-50 rounded-md placeholder-gray-500 w-full p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-fuchsia-400" placeholder="Ingresa aquí tu correo electrónico" required>
+          </div>
+          <div>
+              <label for="contrasena" class="block text-gray-700">Contraseña</label>
+              <input type="password" id="contrasena" name="Ingresar contraseña" class="bg-gray-50 border-2 border-zinc-50 rounded-md placeholder-gray-500 w-full p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-fuchsia-400" placeholder="Ingresa aquí tu contraseña" required>
+          </div>
+          <div class="flex justify-center">
+              <button type="submit" class="transition ease-in-out delay-150 bg-gradient-to-r from-fuchsia-400 via-purple-500 to-fuchsia-400 text-white font-bold py-2 px-4 rounded-md hover:from-pink-300 hover:to-purple-500 w-full duration-300">Aceptar</button>
+          </div>
+        </form>
+        <div>
+          <img src="static/Poppins2.png" alt="Imagen">
+        </div>
+      </div>
+    </main>
+<footer class="bg-[#eabfff] py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center text-gray-100">
+        <p>&copy; 2024 Poppins. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+            <a href="#" class="hover:text-fuchsia-500">Términos de servicio</a>
+            <a href="#" class="hover:text-fuchsia-500">Política de privacidad</a>
+            <a href="#" class="hover:text-fuchsia-500">Quiénes somos</a>
+            <a href="#" class="hover:text-fuchsia-500">Preguntas frecuentes</a>
+            <a href="#" class="hover:text-fuchsia-500">Contáctanos</a>
+        </div>
+        </div>
+        </div>
+</footer>
+</body>
+</html>
